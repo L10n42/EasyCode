@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/test_background"
+    tools:context=".HomeActivity">
+
+   <ImageView
+       android:layout_width="250dp"
+       android:layout_height="250dp"
+       android:layout_marginTop="10dp"
+       android:background="@color/purple_700"
+       android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:textColor="@color/teal_200"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:elevation="10dp"
+        android:background="@drawable/form_bottom_nav_home_activity"
+        android:backgroundTint="@color/violet"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/form_text_view"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="7dp"
+            android:text="Generate QR code"
+            android:textSize="22sp"
+            android:textColor="@color/dodger_blue"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/form_text_view"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="7dp"
+            android:text="Scan QR code"
+            android:textSize="22sp"
+            android:textColor="@color/dodger_blue"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/form_text_view"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="7dp"
+            android:text="Generate BarCode"
+            android:textSize="22sp"
+            android:textColor="@color/dodger_blue"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/form_text_view"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="7dp"
+            android:text="Scan BarCode"
+            android:textSize="22sp"
+            android:textColor="@color/dodger_blue"/>
+
+    </LinearLayout>
+
+</LinearLayout>
