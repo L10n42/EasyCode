@@ -7,6 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="dark_blue">#000510</color>
+
+    <!-- some custom colors -->
+    <color name="button_pressed_true">#3C2853</color>
 
     <!-- my custom palette -->
     <color name="custom_black">#0B0205</color>

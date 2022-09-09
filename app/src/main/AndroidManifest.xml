@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.easycode">
+    package="com.example.easycode" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -12,10 +16,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyCode"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".HomeActivity"
-            android:exported="true">
+            android:name=".activities.EditQRCode"
+            android:exported="false"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activities.ScanBarCodeActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activities.GenerateBarCodeActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activities.ScanQrCodeActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activities.GenerateQrCodeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustNothing"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activities.HomeActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

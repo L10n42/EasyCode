@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/violet"
+    android:orientation="vertical"
+    tools:context=".activities.GenerateQrCodeActivity">
+
+    <Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:title="@string/title_qrcode_generator"
+        android:titleTextColor="@color/white"
+        android:navigationIcon="@drawable/ic_chevron_left_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="m" >
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:elevation="5dp"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="15dp"
+            android:text="Save"
+            android:textColor="@color/dodger_blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/form_button"/>
+    </Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/inputMess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/form_edit_text"
+                android:hint="@string/hint_input_text"
+                android:minLines="2"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text=""
+                android:textColor="@color/custom_black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/btnGenerate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:elevation="5dp"
+                android:background="@drawable/form_button"
+                android:gravity="center_horizontal"
+                android:paddingVertical="7dp"
+                android:text="@string/btn_title_generate_qr_code"
+                android:textSize="22sp"
+                android:textColor="@color/dodger_blue" />
+
+            <ImageView
+                android:id="@+id/ivQrCode"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@drawable/form_bottom_nav"
+        android:backgroundTint="@color/royal_purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvFColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Foreground color:"
+            android:textSize="16sp"
+            android:textColor="@color/dodger_blue"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFColors"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/tvBColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Background color:"
+            android:textSize="16sp"
+            android:textColor="@color/dodger_blue"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBColors"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

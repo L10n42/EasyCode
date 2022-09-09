@@ -3,4 +3,27 @@
 
     <string name="home_activity_title">Home</string>
 
+    <!-- titles text for button -->
+    <string name="btn_title_generate_qr_code">Generate QR code</string>
+    <string name="btn_title_generate_bar_code">Generate Barcode</string>
+    <string name="btn_title_scan_bar_code">Scan Barcode</string>
+    <string name="btn_title_scan_qr_code">Scan QR code</string>
+    
+    <!-- Toast msg -->
+    <string name="msg_saved_successfully">QR code successful saved</string>
+    <string name="msg_generated_successful">QR code successful generated</string>
+
+    <!-- error messages -->
+    <string name="error_input_message">Please input message</string>
+    <string name="error_generating_fail">Generating was not successful =(</string>
+    <string name="error_qrcode_is_empty">Please generate QR code</string>
+    <string name="error_saving_fail">Saving was not successful =(</string>
+
+    <!-- activity titles -->
+    <string name="title_qrcode_generator">QR code generator</string>
+
+    <!-- hints -->
+    <string name="hint_input_text">Input your message here.</string>
+
+
 </resources>
