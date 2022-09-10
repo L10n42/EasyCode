@@ -11,6 +11,7 @@
 
     <!-- some custom colors -->
     <color name="button_pressed_true">#3C2853</color>
+    <color name="scanner_mask_color">#802C1B47</color>
 
     <!-- my custom palette -->
     <color name="custom_black">#0B0205</color>

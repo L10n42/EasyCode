@@ -11,8 +11,6 @@ import androidx.core.content.ContextCompat
 import com.example.easycode.R
 import com.example.easycode.databinding.ActivityHomeBinding
 
-    const val PERMISSION_REQUEST_WRITE_EXTERNAL_STORAGE = 142
-
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
@@ -33,9 +31,8 @@ class HomeActivity : AppCompatActivity() {
         setActionBar(binding.toolBar)
 
         binding.generateQrCode.setOnClickListener { goToActivity(it.id) }
-        binding.scanQrCode.setOnClickListener { goToActivity(it.id) }
+        binding.scanner.setOnClickListener { goToActivity(it.id) }
         binding.generateBarCode.setOnClickListener { goToActivity(it.id) }
-        binding.scanBarCode.setOnClickListener { goToActivity(it.id) }
     }
 
     private fun goToActivity(id: Int) {
@@ -44,16 +41,12 @@ class HomeActivity : AppCompatActivity() {
                 Intent(this, GenerateQrCodeActivity::class.java)
             )
 
-            R.id.scanQrCode -> startActivity(
-                Intent(this, ScanQrCodeActivity::class.java)
+            R.id.scanner -> startActivity(
+                Intent(this, ScannerActivity::class.java)
             )
 
             R.id.generateBarCode -> startActivity(
                 Intent(this, GenerateBarCodeActivity::class.java)
-            )
-
-            R.id.scanBarCode -> startActivity(
-                Intent(this, ScanBarCodeActivity::class.java)
             )
         }
     }

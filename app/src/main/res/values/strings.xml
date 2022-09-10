@@ -1,26 +1,37 @@
 <resources>
     <string name="app_name">EasyCode</string>
 
-    <string name="home_activity_title">Home</string>
-
     <!-- titles text for button -->
     <string name="btn_title_generate_qr_code">Generate QR code</string>
     <string name="btn_title_generate_bar_code">Generate Barcode</string>
-    <string name="btn_title_scan_bar_code">Scan Barcode</string>
-    <string name="btn_title_scan_qr_code">Scan QR code</string>
-    
+    <string name="btn_title_scanner">Scanner</string>
+    <string name="btn_title_back_to_home">Back to home</string>
+    <string name="btn_title_copy">Copy</string>
+    <string name="btn_title_visit_link">Visit link</string>
+
+    <!-- titles -->
+    <string name="tv_title_info">Information:</string>
+    <string name="tv_title_type_text">Type: Text</string>
+    <string name="tv_title_type_link">Type: Link</string>
+
     <!-- Toast msg -->
     <string name="msg_saved_successfully">QR code successful saved</string>
     <string name="msg_generated_successful">QR code successful generated</string>
+    <string name="msg_copied">Copied!</string>
 
     <!-- error messages -->
     <string name="error_input_message">Please input message</string>
     <string name="error_generating_fail">Generating was not successful =(</string>
     <string name="error_qrcode_is_empty">Please generate QR code</string>
     <string name="error_saving_fail">Saving was not successful =(</string>
+    <string name="error_camera_permission_not_granted">You need the camera permission to be able to use this app!</string>
+    <string name="error_cannot_initialize_the_camera">cannot initialize the camera =(</string>
+    <string name="error_text_is_empty">Text is empty!</string>
 
     <!-- activity titles -->
     <string name="title_qrcode_generator">QR code generator</string>
+    <string name="home_activity_title">Home</string>
+    <string name="title_scanner_result_activity">Result</string>
 
     <!-- hints -->
     <string name="hint_input_text">Input your message here.</string>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/violet"
+    tools:context=".activities.ScannerResultActivity">
+
+    <Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:navigationIcon="@drawable/ic_chevron_left_24"
+        android:title="@string/title_scanner_result_activity"
+        android:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/viewType"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        android:elevation="5dp"
+        android:background="@drawable/form_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" >
+
+        <ImageView
+            android:id="@+id/ivType"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            app:tint="@color/dodger_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvType" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/dodger_blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTitleInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/tv_title_info"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/dodger_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewType"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/form_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleInformation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnCopy">
+
+        <TextView
+            android:id="@+id/tvInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="@color/custom_black" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/btnCopy"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/form_button"
+        android:elevation="5dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="7dp"
+        android:text="@string/btn_title_copy"
+        android:textColor="@color/dodger_blue"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/btnVisitLink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/btnVisitLink"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/form_button"
+        android:elevation="5dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="7dp"
+        android:text="@string/btn_title_visit_link"
+        android:textColor="@color/dodger_blue"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

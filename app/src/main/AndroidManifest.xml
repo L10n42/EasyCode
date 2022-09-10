@@ -5,6 +5,12 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
 
     <application
         android:allowBackup="true"
@@ -18,30 +24,26 @@
         android:theme="@style/Theme.EasyCode"
         tools:targetApi="31" >
         <activity
-            android:name=".activities.EditQRCode"
+            android:name=".activities.ScannerResultActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
-        <activity
-            android:name=".activities.ScanBarCodeActivity"
-            android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.GenerateBarCodeActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.ScanQrCodeActivity"
+            android:name=".activities.ScannerActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.GenerateQrCodeActivity"
             android:exported="false"
             android:windowSoftInputMode="stateVisible|adjustNothing"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.HomeActivity"
             android:exported="true"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

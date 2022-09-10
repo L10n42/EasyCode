@@ -61,51 +61,39 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-            android:id="@+id/generateQrCode"
+            android:id="@+id/scanner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="30dp"
-            android:elevation="5dp"
-            android:background="@drawable/form_button"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="7dp"
-            android:text="@string/btn_title_generate_qr_code"
-            android:textSize="22sp"
-            android:textColor="@color/dodger_blue"/>
-
-        <TextView
-            android:id="@+id/scanQrCode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="15dp"
             android:elevation="5dp"
             android:background="@drawable/form_button"
             android:paddingHorizontal="20dp"
             android:paddingVertical="7dp"
-            android:text="@string/btn_title_scan_qr_code"
+            android:gravity="center_vertical"
+            android:text="@string/btn_title_scanner"
+            android:textSize="22sp"
+            android:textColor="@color/dodger_blue"/>
+
+        <TextView
+            android:id="@+id/generateQrCode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:elevation="5dp"
+            android:background="@drawable/form_button"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="7dp"
+            android:gravity="center_vertical"
+            android:text="@string/btn_title_generate_qr_code"
             android:textSize="22sp"
             android:textColor="@color/dodger_blue"/>
 
         <TextView
             android:id="@+id/generateBarCode"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="15dp"
-            android:elevation="5dp"
-            android:background="@drawable/form_button"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="7dp"
-            android:text="@string/btn_title_generate_bar_code"
-            android:textSize="22sp"
-            android:textColor="@color/dodger_blue"/>
-
-        <TextView
-            android:id="@+id/scanBarCode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
@@ -113,9 +101,11 @@
             android:background="@drawable/form_button"
             android:paddingHorizontal="20dp"
             android:paddingVertical="7dp"
-            android:text="@string/btn_title_scan_bar_code"
+            android:gravity="center_vertical"
+            android:text="@string/btn_title_generate_bar_code"
             android:textSize="22sp"
             android:textColor="@color/dodger_blue"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

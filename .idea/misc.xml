@@ -9,6 +9,7 @@
         <entry key="..\:/EasyCode/app/src/main/res/drawable/form_text_view.xml" value="0.202" />
         <entry key="..\:/EasyCode/app/src/main/res/drawable/home_qr_code.xml" value="0.202" />
         <entry key="..\:/EasyCode/app/src/main/res/drawable/ic_chevron_left_24.xml" value="0.2035" />
+        <entry key="..\:/EasyCode/app/src/main/res/drawable/ic_link_rotation_45.xml" value="0.2045" />
         <entry key="..\:/EasyCode/app/src/main/res/layout-v23/activity_home.xml" value="0.36666666666666664" />
         <entry key="..\:/EasyCode/app/src/main/res/layout/activity_edit_qrcode.xml" value="0.36666666666666664" />
         <entry key="..\:/EasyCode/app/src/main/res/layout/activity_generate_bar_code.xml" value="0.36666666666666664" />
@@ -16,6 +17,8 @@
         <entry key="..\:/EasyCode/app/src/main/res/layout/activity_home.xml" value="0.36666666666666664" />
         <entry key="..\:/EasyCode/app/src/main/res/layout/activity_scan_bar_code.xml" value="0.36666666666666664" />
         <entry key="..\:/EasyCode/app/src/main/res/layout/activity_scan_qr_code.xml" value="0.36666666666666664" />
+        <entry key="..\:/EasyCode/app/src/main/res/layout/activity_scanner.xml" value="0.36666666666666664" />
+        <entry key="..\:/EasyCode/app/src/main/res/layout/activity_scanner_result.xml" value="0.33" />
         <entry key="..\:/EasyCode/app/src/main/res/layout/custom_toast_layout.xml" value="0.36666666666666664" />
       </map>
     </option>

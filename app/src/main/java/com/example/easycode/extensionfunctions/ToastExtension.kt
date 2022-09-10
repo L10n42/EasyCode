@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.easycode.R
 
-    const val CUSTOM_TOAST_DEFAULT = 1440
+   private const val CUSTOM_TOAST_DEFAULT = 1440
 
 @SuppressLint("ResourceAsColor", "InflateParams")
 fun AppCompatActivity.customToast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT,
