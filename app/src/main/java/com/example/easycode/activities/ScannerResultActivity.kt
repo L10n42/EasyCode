@@ -49,7 +49,6 @@ class ScannerResultActivity : AppCompatActivity() {
         val openUrl = Intent(Intent.ACTION_VIEW)
         openUrl.data = Uri.parse(link)
         startActivity(openUrl)
-        finish()
     }
 
     private fun copyText(text: String) {
