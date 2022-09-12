@@ -2,27 +2,33 @@
     <string name="app_name">EasyCode</string>
 
     <!-- titles text for button -->
+    <string name="btn_title_generate">Generate</string>
     <string name="btn_title_generate_qr_code">Generate QR code</string>
     <string name="btn_title_generate_bar_code">Generate Barcode</string>
     <string name="btn_title_scanner">Scanner</string>
     <string name="btn_title_back_to_home">Back to home</string>
     <string name="btn_title_copy">Copy</string>
     <string name="btn_title_visit_link">Visit link</string>
+    <string name="btn_title_save">Save</string>
 
     <!-- titles -->
     <string name="tv_title_info">Information:</string>
     <string name="tv_title_type_text">Type: Text</string>
     <string name="tv_title_type_link">Type: Link</string>
+    <string name="tv_title_format">Format:</string>
 
     <!-- Toast msg -->
-    <string name="msg_saved_successfully">QR code successful saved</string>
-    <string name="msg_generated_successful">QR code successful generated</string>
+    <string name="msg_saved_successfully">successfully saved!</string>
+    <string name="msg_generated_successful">successfully generated!</string>
+    <string name="msg_saved_successfully_barcode">Barcode code successful saved</string>
+    <string name="msg_generated_successful_barcode">Barcode successful generated</string>
     <string name="msg_copied">Copied!</string>
 
     <!-- error messages -->
     <string name="error_input_message">Please input message</string>
     <string name="error_generating_fail">Generating was not successful =(</string>
     <string name="error_qrcode_is_empty">Please generate QR code</string>
+    <string name="error_barcode_is_empty">Please generate Barcode code</string>
     <string name="error_saving_fail">Saving was not successful =(</string>
     <string name="error_camera_permission_not_granted">You need the camera permission to be able to use this app!</string>
     <string name="error_cannot_initialize_the_camera">cannot initialize the camera =(</string>
@@ -30,11 +36,23 @@
 
     <!-- activity titles -->
     <string name="title_qrcode_generator">QR code generator</string>
+    <string name="title_barcode_generator">Barcode generator</string>
     <string name="home_activity_title">Home</string>
     <string name="title_scanner_result_activity">Result</string>
 
     <!-- hints -->
     <string name="hint_input_text">Input your message here.</string>
+
+    <!-- Barcode Formats array -->
+    <string-array name="Formats">
+        <item>UPC-A</item>
+        <item>UPC-E</item>
+        <item>EAN-13</item>
+        <item>EAN-8</item>
+        <item>Code 128</item>
+        <item>Code 39</item>
+        <item>Codabar</item>
+    </string-array>
 
 
 </resources>

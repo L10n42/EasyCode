@@ -6,13 +6,12 @@
     android:layout_height="match_parent"
     android:background="@color/violet"
     android:orientation="vertical"
-    tools:context=".activities.GenerateQrCodeActivity">
+    tools:context=".activities.GeneratorActivity">
 
     <Toolbar
         android:id="@+id/toolBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:title="@string/title_qrcode_generator"
         android:titleTextColor="@color/white"
         android:navigationIcon="@drawable/ic_chevron_left_24"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +30,7 @@
             android:elevation="5dp"
             android:paddingVertical="5dp"
             android:paddingHorizontal="15dp"
-            android:text="Save"
+            android:text="@string/btn_title_save"
             android:textColor="@color/dodger_blue"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -77,17 +76,17 @@
                 android:background="@drawable/form_button"
                 android:gravity="center_horizontal"
                 android:paddingVertical="7dp"
-                android:text="@string/btn_title_generate_qr_code"
+                android:text="@string/btn_title_generate"
                 android:textSize="22sp"
                 android:textColor="@color/dodger_blue" />
 
             <ImageView
-                android:id="@+id/ivQrCode"
-                android:layout_width="250dp"
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="20dp"
                 android:layout_height="250dp"
                 android:layout_marginBottom="10dp"
-                android:layout_gravity="center_horizontal"
-                android:scaleType="centerCrop"/>
+                android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
 

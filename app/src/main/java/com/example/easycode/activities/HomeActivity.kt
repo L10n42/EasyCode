@@ -36,9 +36,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun goToActivity(id: Int) {
+        /** type: 0 == qrcode || type: 1 == barcode */
         when (id) {
             R.id.generateQrCode -> startActivity(
-                Intent(this, GenerateQrCodeActivity::class.java)
+                Intent(this, GeneratorActivity::class.java).putExtra("type", 0)
             )
 
             R.id.scanner -> startActivity(
@@ -46,7 +47,7 @@ class HomeActivity : AppCompatActivity() {
             )
 
             R.id.generateBarCode -> startActivity(
-                Intent(this, GenerateBarCodeActivity::class.java)
+                Intent(this, GeneratorActivity::class.java).putExtra("type", 1)
             )
         }
     }
