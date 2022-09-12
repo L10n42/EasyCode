@@ -10,6 +10,8 @@
     <string name="btn_title_copy">Copy</string>
     <string name="btn_title_visit_link">Visit link</string>
     <string name="btn_title_save">Save</string>
+    <string name="btn_choose_another_image">Choose another image</string>
+    <string name="btn_scan_photo">Scan this photo</string>
 
     <!-- titles -->
     <string name="tv_title_info">Information:</string>
@@ -26,19 +28,23 @@
 
     <!-- error messages -->
     <string name="error_input_message">Please input message</string>
-    <string name="error_generating_fail">Generating was not successful =(</string>
+    <string name="error_generating_fail">Generating was not successful =[</string>
     <string name="error_qrcode_is_empty">Please generate QR code</string>
     <string name="error_barcode_is_empty">Please generate Barcode code</string>
-    <string name="error_saving_fail">Saving was not successful =(</string>
+    <string name="error_saving_fail">Saving was not successful =[</string>
     <string name="error_camera_permission_not_granted">You need the camera permission to be able to use this app!</string>
     <string name="error_cannot_initialize_the_camera">cannot initialize the camera =(</string>
     <string name="error_text_is_empty">Text is empty!</string>
+    <string name="error_wrong_link">This link is wrong, can\'t open it =[</string>
+    <string name="error_image_canceled">Canceled…!</string>
+    <string name="error_failed_scanning">Failed scanning due to</string>
 
     <!-- activity titles -->
     <string name="title_qrcode_generator">QR code generator</string>
     <string name="title_barcode_generator">Barcode generator</string>
     <string name="home_activity_title">Home</string>
     <string name="title_scanner_result_activity">Result</string>
+    <string name="title_photo_scanner_activity">Photo scanner</string>
 
     <!-- hints -->
     <string name="hint_input_text">Input your message here.</string>
@@ -53,6 +59,5 @@
         <item>Code 39</item>
         <item>Codabar</item>
     </string-array>
-
 
 </resources>

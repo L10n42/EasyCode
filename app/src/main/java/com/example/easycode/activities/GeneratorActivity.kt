@@ -48,13 +48,7 @@ class GeneratorActivity : AppCompatActivity() {
         }
 
         binding.btnSave.setOnClickListener {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED){
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
-                    PERMISSION_REQUEST_WRITE_EXTERNAL_STORAGE)
-            } else {
-                saveImage(myBitmap, type)
-            }
+            saveImage(myBitmap, type)
         }
 
         binding.btnGenerate.setOnClickListener {
@@ -87,19 +81,6 @@ class GeneratorActivity : AppCompatActivity() {
         val photoSaver = PhotoSaver(applicationContext)
 
         photoSaver.saveImage(bitmap, type)
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == PERMISSION_REQUEST_WRITE_EXTERNAL_STORAGE &&
-            grantResults.isNotEmpty() &&
-            grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            saveImage(myBitmap, type)
-        }
     }
 
     @SuppressLint("UseSupportActionBar")

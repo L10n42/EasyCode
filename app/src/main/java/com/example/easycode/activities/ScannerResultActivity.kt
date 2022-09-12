@@ -14,12 +14,17 @@ import android.widget.Toast
 import com.example.easycode.R
 import com.example.easycode.databinding.ActivityScannerResultBinding
 import com.example.easycode.extensionfunctions.customToast
+import java.lang.Exception
 import java.net.URI
 
 class ScannerResultActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityScannerResultBinding
     private var isLink: Boolean = false
+
+    private val pattern1 = "http://"
+    private val pattern2 = "https://"
+    private val pattern3 = ".com"
 
     @SuppressLint("UseSupportActionBar")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,9 +51,25 @@ class ScannerResultActivity : AppCompatActivity() {
     }
 
     private fun visitLink(link: String) {
-        val openUrl = Intent(Intent.ACTION_VIEW)
-        openUrl.data = Uri.parse(link)
-        startActivity(openUrl)
+        try {
+            val openUrl = Intent(Intent.ACTION_VIEW)
+            openUrl.data = Uri.parse(checkLink(link))
+            startActivity(openUrl)
+        } catch (e: Exception){
+            customToast(
+                resources.getString(R.string.error_wrong_link),
+                Toast.LENGTH_LONG,
+                resources.getColor(R.color.royal_purple),
+                resources.getColor(R.color.dodger_blue)
+            )
+        }
+    }
+
+    private fun checkLink(link: String): String {
+        return if (link.startsWith(pattern1, true) || link.startsWith(pattern2, true)){
+            link
+        } else
+            pattern1 + link
     }
 
     private fun copyText(text: String) {
@@ -94,13 +115,9 @@ class ScannerResultActivity : AppCompatActivity() {
     }
 
     private fun initTypeOfResult(result: String) {
-        val pattern1 = "http://"
-        val pattern2 = "https://"
-        val pattern3 = "www."
-        val pattern4 = ".com"
 
-        if (result.startsWith(pattern1, true) || result.startsWith(pattern2, true) ||
-            result.startsWith(pattern3, true) || result.contains(pattern4, true) )
+        if (result.startsWith(pattern1, true) || result.startsWith(pattern2, true)
+            || result.contains(pattern3, true) )
         {
             isLink = true
             resultIsLink()

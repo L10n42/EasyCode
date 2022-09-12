@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.easycode" >
+    package="com.example.easycode">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera"
-        android:required="false"/>
+        android:required="false" />
 
     <application
         android:allowBackup="true"
-        android:hardwareAccelerated="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyCode"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.PhotoScanner"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.ScannerResultActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activities.GenerateBarCodeActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -38,12 +39,12 @@
         <activity
             android:name=".activities.GeneratorActivity"
             android:exported="false"
-            android:windowSoftInputMode="stateVisible|adjustNothing"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustNothing" />
         <activity
             android:name=".activities.HomeActivity"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

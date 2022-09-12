@@ -6,10 +6,12 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.easycode.R
 import com.example.easycode.databinding.ActivityHomeBinding
+import com.example.easycode.extensionfunctions.customToast
 
 class HomeActivity : AppCompatActivity() {
 
@@ -49,6 +51,55 @@ class HomeActivity : AppCompatActivity() {
             R.id.generateBarCode -> startActivity(
                 Intent(this, GeneratorActivity::class.java).putExtra("type", 1)
             )
+        }
+    }
+
+    private fun setupPermissions() {
+        val permission = ContextCompat.checkSelfPermission(this,
+            Manifest.permission.CAMERA)
+        val permission2 = ContextCompat.checkSelfPermission(this,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE)
+
+        if (permission != PackageManager.PERMISSION_GRANTED){
+            makeRequest(1)
+        } else if (permission2 != PackageManager.PERMISSION_GRANTED) {
+            makeRequest(2)
+        }
+    }
+
+    private fun makeRequest(number: Int) {
+        when (number) {
+            1 -> {
+                ActivityCompat.requestPermissions(this,
+                    arrayOf(Manifest.permission.CAMERA), PERMISSION_REQUEST_CAMERA)
+            }
+            2 -> {
+                ActivityCompat.requestPermissions(this,
+                    arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), PERMISSION_REQUEST_WRITE_EXTERNAL_STORAGE)
+            }
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        when (requestCode) {
+            PERMISSION_REQUEST_CAMERA -> {
+                setupPermissions()
+//                if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED){
+//                   setupPermissions()
+//                }
+            }
+            PERMISSION_REQUEST_WRITE_EXTERNAL_STORAGE -> {
+                setupPermissions()
+//                if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED){
+//                    setupPermissions()
+//                }
+            }
         }
     }
 
