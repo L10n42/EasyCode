@@ -20,6 +20,7 @@ class HomeActivity : AppCompatActivity() {
     @SuppressLint("UseSupportActionBar")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_EasyCode)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

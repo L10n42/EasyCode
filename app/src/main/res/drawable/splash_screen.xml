@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@color/black"
+        android:width="1080dp"
+        android:height="1920dp"/>
+
+    <item
+        android:gravity="center">
+        <layer-list>
+            <item
+                android:drawable="@drawable/ic_easycode_logo"
+                android:gravity="center_horizontal"
+                android:width="250dp"
+                android:height="250dp"/>
+
+            <item
+                android:drawable="@drawable/easy_code_text"
+                android:top="280dp"
+                android:height="100dp"
+                android:width="300dp" />
+
+        </layer-list>
+    </item>
+
+
+</layer-list>

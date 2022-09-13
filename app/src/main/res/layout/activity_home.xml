@@ -22,8 +22,7 @@
         android:logo="@drawable/ic_home_24"
         android:elevation="0dp"
         android:background="@android:color/transparent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:targetApi="m" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ivQrCode"
@@ -68,12 +67,15 @@
             android:layout_marginTop="15dp"
             android:elevation="5dp"
             android:background="@drawable/form_button"
-            android:paddingHorizontal="20dp"
+            android:paddingHorizontal="10dp"
             android:paddingVertical="7dp"
             android:gravity="center_vertical"
             android:text="@string/btn_title_scanner"
             android:textSize="22sp"
-            android:textColor="@color/dodger_blue"/>
+            android:textColor="@color/dodger_blue"
+            android:drawablePadding="10dp"
+            app:drawableTint="@color/dodger_blue"
+            app:drawableStartCompat="@drawable/ic_scanner" />
 
         <TextView
             android:id="@+id/generateQrCode"
@@ -83,12 +85,15 @@
             android:layout_marginTop="15dp"
             android:elevation="5dp"
             android:background="@drawable/form_button"
-            android:paddingHorizontal="20dp"
+            android:paddingHorizontal="10dp"
             android:paddingVertical="7dp"
             android:gravity="center_vertical"
             android:text="@string/btn_title_generate_qr_code"
             android:textSize="22sp"
-            android:textColor="@color/dodger_blue"/>
+            android:textColor="@color/dodger_blue"
+            android:drawablePadding="10dp"
+            app:drawableTint="@color/dodger_blue"
+            app:drawableStartCompat="@drawable/ic_qrcode_black"/>
 
         <TextView
             android:id="@+id/generateBarCode"
@@ -99,12 +104,15 @@
             android:layout_marginBottom="20dp"
             android:elevation="5dp"
             android:background="@drawable/form_button"
-            android:paddingHorizontal="20dp"
+            android:paddingHorizontal="10dp"
             android:paddingVertical="7dp"
             android:gravity="center_vertical"
             android:text="@string/btn_title_generate_bar_code"
             android:textSize="22sp"
-            android:textColor="@color/dodger_blue"/>
+            android:textColor="@color/dodger_blue"
+            android:drawablePadding="10dp"
+            app:drawableTint="@color/dodger_blue"
+            app:drawableStartCompat="@drawable/ic_barcode_black"/>
 
     </LinearLayout>
 

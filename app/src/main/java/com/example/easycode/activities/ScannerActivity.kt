@@ -124,42 +124,4 @@ class ScannerActivity : AppCompatActivity() {
         codeScanner.stopPreview()
         super.onPause()
     }
-
-
-//    private fun setupPermissions() {
-//        val permission = ContextCompat.checkSelfPermission(this,
-//            android.Manifest.permission.CAMERA)
-//        val permission2 = ContextCompat.checkSelfPermission(this,
-//            android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-//
-//        if (permission != PackageManager.PERMISSION_GRANTED && permission2 != PackageManager.PERMISSION_GRANTED){
-//            makeRequest(1)
-//        } else if ()
-//
-//    }
-//
-//    private fun makeRequest(number: Int) {
-//        ActivityCompat.requestPermissions(this,
-//            arrayOf(android.Manifest.permission.CAMERA, android.Manifest.permission.WRITE_EXTERNAL_STORAGE), PERMISSION_REQUEST_CAMERA)
-//    }
-//
-//    override fun onRequestPermissionsResult(
-//        requestCode: Int,
-//        permissions: Array<out String>,
-//        grantResults: IntArray
-//    ) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//        when (requestCode) {
-//            PERMISSION_REQUEST_CAMERA -> {
-//                if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED){
-//                    customToast(
-//                        resources.getString(R.string.error_camera_permission_not_granted),
-//                        Toast.LENGTH_LONG,
-//                        resources.getColor(R.color.royal_purple),
-//                        resources.getColor(R.color.dodger_blue)
-//                    )
-//                }
-//            }
-//        }
-//    }
 }
